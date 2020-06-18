@@ -59,7 +59,7 @@ class SyncServer:
     SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     REQUEST_FILE_LIST = []
     HEADER = 10
-    SERVER = '192.168.0.36'
+    SERVER = 'localhost'
     PORT = 7101
 
     def __init__(self):

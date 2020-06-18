@@ -26,7 +26,7 @@ class FileClient:
             print('FC: Connecting to host: localhost port: 7100' + file)
             # Configure the socket
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            s.connect(('192.168.0.36', 7100))
+            s.connect(('localhost', 7100))
             print('FC: Connected')
             print('FC: Reading:' + file)
             # Open the file
