@@ -9,7 +9,7 @@ A commandline client that takes one argument which is the local directory it sho
 The client is hardcoded to use **localhost** as the address for the server and **7101** as the port for the server.
 There is an additional port used for file data transfer which is **7100**.
 
-Upon running client connects to the server and sends a list of files (with md5's) which are contained within the directory passed as an arguement.
+Upon running client connects to the server and sends a list of files (with md5's) which are contained within the directory passed as an argument.
 
 It then waits for a response from the server in the form of either a **filerequest** or **sync:done** message.
 
@@ -19,7 +19,7 @@ The connection to the server is then closed and a 60s wait before contacting the
 If a **filerequest** message is received then one message parameter is passed with it which contains the file to send in the following format: **[[file location, file name, file md5]]** .
 Upon receipt of this message the client opens up a second connection to the server on port **7100** and sends the file data, closing the connection upon completion of each file.
 
-It then continues to process any addition **filerequest** messages frome the server until a **sync:done** is received.
+It then continues to process any addition **filerequest** messages from the server until a **sync:done** is received.
 
 **server-sync.py**
 
@@ -44,7 +44,7 @@ It then deletes any files that are no longer required.
 
 The next step is it sending a **filerequest** message to the client on a per file basis, opening a second port to receive the file data and saving it locally.
 
-Finally once all the files have been request the server sends a **sync:done** message to the client informing it that it has finished and the client can disconnect.
+Finally once all the files have been requested and received the server sends a **sync:done** message to the client informing it that it has finished and the client can disconnect.
 
 **Running**
 
