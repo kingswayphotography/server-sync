@@ -27,7 +27,7 @@ class FileServer:
         print('FS: Opening sever: localhost port: 7100')
         # Configure the socket
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.bind(('192.168.0.36', 7100))
+        s.bind(('localhost', 7100))
         s.listen(5)
         print('FS: Waiting for connection')
         client, address = s.accept()

@@ -56,7 +56,7 @@ class SyncClient:
     CURRENT_FILE_LIST = ''
     SOCKET = []
     HEADER = 10
-    SERVER = '192.168.0.36'
+    SERVER = 'localhost'
     PORT = 7101
 
     def __init__(self):
