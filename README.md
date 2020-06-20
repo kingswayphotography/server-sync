@@ -55,10 +55,10 @@ Finally once all the files have been requested and received the server sends a *
 
 No trailing slash is required on the file path argument for either python script. 
 
-**test-sync**
+**test-sync.py**
 
 Before running the tests the variables in in the ServerSyncTest class need setting for the CLIENT_FOLDER and SERVER_FOLDER.
-Make sure they are empty folders to ensure a clean test environment.
+Make sure they are empty folders to ensure a clean test environment. Tests take approx 12 minutes to run, this is due to the frequency the client connects to the server.
 
 To run the tests from the commandline:
 `python3 test-sync.py`
