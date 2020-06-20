@@ -54,3 +54,24 @@ Finally once all the files have been requested and received the server sends a *
 `python3 client-sync.py /dir/to/keep/in/sync`
 
 No trailing slash is required on the file path argument for either python script. 
+
+**test-sync**
+
+Before running the tests the variables in in the ServerSyncTest class need setting for the CLIENT_FOLDER and SERVER_FOLDER.
+Make sure they are empty folders to ensure a clean test environment.
+
+To run the tests from the commandline:
+`python3 test-sync.py`
+
+The tests that re performed as as follows:
+* 001 - Add a file to the client folder
+* 002 - Delete a file from the client folder
+* 003 - Rename a file in the client folder
+* 004 - Modify a file in the client folder
+* 005 - Add a file to client folder with matching md5 to an exising file
+* 006 - Add a file to the server directory
+* 007 - Delete a file from the server directory
+
+The main logs for the tests are saved to **test_sync.log**. 
+For each test a log is taken from the server process and saved to **test_XXX_server.log** where XXX is the test number.
+Likewise for each test run the client process logs are saved to **test_XXX_client.log**.

@@ -28,7 +28,7 @@ class FileClient:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect(('localhost', 7100))
             print('FC: Connected')
-            print('FC: Reading:' + file)
+            print('FC: Reading:', file)
             # Open the file
             f = open(os.path.join(folder, file), 'rb')
             # Send the data in chunks
